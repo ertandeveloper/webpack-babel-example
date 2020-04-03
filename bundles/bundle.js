@@ -3553,30 +3553,6 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 
 /***/ }),
 
-/***/ "./src/app1.js":
-/*!*********************!*\
-  !*** ./src/app1.js ***!
-  \*********************/
-/*! exports provided: Person */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Person\", function() { return Person; });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Person = /*#__PURE__*/function () {\n  function Person() {\n    _classCallCheck(this, Person);\n  }\n\n  _createClass(Person, null, [{\n    key: \"Test\",\n    value: function Test() {\n      console.log(\"Person Statik Test\");\n    }\n  }]);\n\n  return Person;\n}();\n\n//# sourceURL=webpack:///./src/app1.js?");
-
-/***/ }),
-
-/***/ "./src/app2.js":
-/*!*********************!*\
-  !*** ./src/app2.js ***!
-  \*********************/
-/*! exports provided: Employee */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Employee\", function() { return Employee; });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Employee = /*#__PURE__*/function () {\n  function Employee() {\n    _classCallCheck(this, Employee);\n  }\n\n  _createClass(Employee, null, [{\n    key: \"Test\",\n    value: function Test() {\n      console.log(\"Employee Statik Test\");\n    }\n  }]);\n\n  return Employee;\n}();\n\n//# sourceURL=webpack:///./src/app2.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -3585,7 +3561,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app1 */ \"./src/app1.js\");\n/* harmony import */ var _app2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app2 */ \"./src/app2.js\");\n\n\n_app1__WEBPACK_IMPORTED_MODULE_0__[\"Person\"].Test();\n_app2__WEBPACK_IMPORTED_MODULE_1__[\"Employee\"].Test();\nconsole.log(\"Test1\");\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module1 */ \"./src/module1.js\");\n// import {Person} from \"./app1\";\n// import {Employee} from \"./app2\";\n\n/*Person.Test();\nEmployee.Test();*/\n//CommonJs Modülleri\n// const app = require(\"./module1\");\n// app.test1();\n// app.test2();\n// app.test1();\n// console.log(app.name);\n// console.log(app.person.name);\n//ES6 Modules\n\n/*\nimport {test,Person,employee} from \"./module1\";\nPerson.test();\ntest();\nconsole.log(employee.salary);*/\n\n/*import * as module1 from \"./module1\";\nmodule1.Person.test();\nmodule1.test();\nconsole.log(module1.employee.salary);*/\n\n_module1__WEBPACK_IMPORTED_MODULE_0__[\"default\"].deneme();\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/module1.js":
+/*!************************!*\
+  !*** ./src/module1.js ***!
+  \************************/
+/*! exports provided: name, test, Person, employee, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"name\", function() { return name; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"test\", function() { return test; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Person\", function() { return Person; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"employee\", function() { return employee; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Deneme; });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n// module.exports.test1 = function test1() {\n//     console.log(\"Test1\");\n// }\n// module.exports.test2 = function test2() {\n//     console.log(\"Test2\");\n// }\n\n/*\nmodule.exports = {\n    name: \"Ertan\",\n    test1: function () {\n        console.log(\"Test 1\");\n    },\n    person:{\n      name:\"Ertan\",\n      mail:\"ertandonnmez@gmail.com\"\n    }\n}*/\n//ES6 Modules\nvar name = \"Ertan\";\nfunction test() {\n  console.log(\"Test Fonksiyonu\");\n}\nvar Person = /*#__PURE__*/function () {\n  function Person() {\n    _classCallCheck(this, Person);\n  }\n\n  _createClass(Person, null, [{\n    key: \"test\",\n    value: function test() {\n      console.log(\"Person Test\");\n    }\n  }]);\n\n  return Person;\n}();\nvar employee = {\n  name: \"Ertan\",\n  salary: \"00000\"\n};\n\nvar Deneme = /*#__PURE__*/function () {\n  function Deneme() {\n    _classCallCheck(this, Deneme);\n  }\n\n  _createClass(Deneme, null, [{\n    key: \"deneme\",\n    value: function deneme() {\n      console.log(\"deneme\");\n    }\n  }]);\n\n  return Deneme;\n}();\n\n\n\n//# sourceURL=webpack:///./src/module1.js?");
 
 /***/ }),
 
